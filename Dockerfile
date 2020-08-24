@@ -12,6 +12,8 @@ RUN apt-get update \
 
 COPY --from=builder /go/src/github.com/soundcloud/ipmi_exporter/ipmi_exporter /bin/ipmi_exporter
 
+ADD ipmi_local.yml /config.yml
+
 EXPOSE 9290
 ENTRYPOINT ["/bin/ipmi_exporter"]
 CMD ["--config.file", "/config.yml"]
