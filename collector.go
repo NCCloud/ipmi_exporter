@@ -33,7 +33,7 @@ var (
 	ipmiSELEntriesRegex               = regexp.MustCompile(`^Number of log entries\s*:\s(?P<value>[0-9.]*)`)
 	ipmiSELFreeSpaceRegex             = regexp.MustCompile(`^Free space remaining\s*:\s(?P<value>[0-9.]*)\s*bytes.*`)
 	bmcInfoFirmwareRevisionRegex      = regexp.MustCompile(`^Firmware Revision\s*:\s*(?P<value>[0-9.]*).*`)
-	bmcInfoSystemFirmwareVersionRegex = regexp.MustCompile(`^System Firmware Version\s*:\s*(?P<value>[0-9.]*).*`)
+	bmcInfoSystemFirmwareVersionRegex = regexp.MustCompile(`^(System Firmware Version|Firmware Revision)\s*:\s*(?P<value>[0-9.]*).*`)
 	bmcInfoManufacturerIDRegex        = regexp.MustCompile(`^Manufacturer ID\s*:\s*(?P<value>.*)`)
 )
 
